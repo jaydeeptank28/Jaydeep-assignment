@@ -26,21 +26,4 @@ void main (){
 	{
         printf("%d\n", num[i]);
     }
-    
-    
-    //Decending order  
-    for (i = 0; i < 5; i++){
-        for (j = i + 1; j < 5; j++){
-            if (num[i] < num[j]){
-                a = num[i];
-                num[i] = num[j];
-                num[j] = a;
-            }
-        }
-    }
-    printf("The numbers in Decending order is:\n");
-    for (i = 0; i < 5; i++)
-	{
-        printf("%d\n", num[i]);
-    }
 }
