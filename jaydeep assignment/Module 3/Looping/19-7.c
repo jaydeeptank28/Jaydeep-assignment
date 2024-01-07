@@ -1,7 +1,3 @@
-/**
- * C program to print perfect square number pattern
- */
-
 #include <stdio.h>
 
 #define SIZE 10 // Size is always even
