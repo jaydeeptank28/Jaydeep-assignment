@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 #define SIZE 10 // Size is always even
 
 int main()
