@@ -1,17 +1,22 @@
 # Are the HTML tags and elements the same thing?
-> No, HTML tags and elements are not the same thing. Tags are the markup characters used to denote the start and end of an element, while elements are made up of a start tag, content, and an end tag. For example, <p> is a tag, and <p>This is a paragraph.</p> is a paragraph element.
+> No, HTML tags and elements are not the same thing. Tags are the markup characters used to denote the start
+  and end of an element, while elements are made up of a start tag, content, and an end tag. For example, <p>
+  is a tag, and <p>This is a paragraph.</p> is a paragraph element.
 
 
 # What are tags and attributes in HTML?
-> Tags are the markup characters used to define the structure of an HTML document. Attributes provide additional information about HTML elements and are placed within the opening tag of an element.
+> Tags are the markup characters used to define the structure of an HTML document. Attributes provide additional 
+  information about HTML elements and are placed within the opening tag of an element.
 
 
 # What are void elements in HTML?
-> Void elements are HTML elements that do not have a closing tag. They self-close in the opening tag. Examples include <img>, <br>, and <input>.
+> Void elements are HTML elements that do not have a closing tag. They self-close in the opening tag. Examples include 
+  <img>, <br>, and <input>.
 
 
 # What are HTML Entities?
-> HTML entities are special codes used to display reserved characters in HTML. For example, &lt; represents the less-than symbol <.
+> HTML entities are special codes used to display reserved characters in HTML. For example, &lt; represents the less-than
+  symbol <.
 
 
 # What are different types of lists in HTML?
@@ -19,19 +24,23 @@
 
 
 # What is the ‘class’ attribute in HTML?
-> The class attribute is used to specify one or more class names for an HTML element. It is mainly used for styling and JavaScript manipulation.
+> The class attribute is used to specify one or more class names for an HTML element. It is mainly used for styling and 
+  JavaScript manipulation.
 
 
 # What is the difference between the ‘id’ attribute and the ‘class’ attribute of HTML elements?
-> The id attribute uniquely identifies an element within a document, while the class attribute can be applied to multiple elements to categorize them.
+> The id attribute uniquely identifies an element within a document, while the class attribute can be applied to multiple 
+  elements to categorize them.
 
 
 # What are the various formatting tags in HTML?
-> Formatting tags in HTML include <b> for bold, <i> for italic, <u> for underline, <strong> for strong emphasis, <em> for emphasis, <sub> for subscript, <sup> for superscript, etc.
+> Formatting tags in HTML include <b> for bold, <i> for italic, <u> for underline, <strong> for strong emphasis, <em> for emphasis, 
+  <sub> for subscript, <sup> for superscript, etc.
 
 
 # How is Cell Padding different from Cell Spacing?
-> Cell padding in HTML specifies the space between the cell content and the cell border, while cell spacing specifies the space between cells in a table.
+> Cell padding in HTML specifies the space between the cell content and the cell border, while cell spacing specifies the space 
+  between cells in a table.
 
 
 # How can we club two or more rows or columns into a single row or column in an HTML table?
@@ -39,7 +48,8 @@
 
 
 # What is the difference between a block-level element and an inline element?
-> Block-level elements start on a new line and take up the full width available, while inline elements do not start on a new line and only take up as much width as necessary.
+> Block-level elements start on a new line and take up the full width available, while inline elements do not start on a new  
+  line and only take up as much width as necessary.
 
 
 # How to create a Hyperlink in HTML?
@@ -59,7 +69,8 @@
 
 
 # How are active links different from normal links?
-> Active links usually refer to links that are currently being clicked or interacted with by the user. Normal links are simply links present in the document.
+> Active links usually refer to links that are currently being clicked or interacted with by the user. Normal links are simply links 
+  present in the document.
 
 
 # What are the different tags to separate sections of text?
@@ -67,12 +78,16 @@
 
 
 # What is SVG?
-> SVG stands for Scalable Vector Graphics. It is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation.
+> SVG stands for Scalable Vector Graphics. It is an XML-based vector image format for two-dimensional graphics with support for 
+  interactivity and animation.
 
 
 # What is the difference between HTML and XHTML?
-> XHTML is a stricter and more XML-compliant version of HTML. XHTML requires all tags to be properly nested and closed, and attribute values to be enclosed in quotes.
+> XHTML is a stricter and more XML-compliant version of HTML. XHTML requires all tags to be properly nested and closed, and 
+  attribute values to be enclosed in quotes.
 
 
 # What are logical and physical tags in HTML?
-> In HTML, logical tags represent the structure and meaning of the content (e.g., <p>, <h1>, <table>), while physical tags represent how the content should be presented (e.g., <b> for bold, <i> for italic). With the advent of CSS, physical tags have become less relevant for styling purposes.
+> In HTML, logical tags represent the structure and meaning of the content (e.g., <p>, <h1>, <table>), while physical tags represent 
+  how the content should be presented (e.g., <b> for bold, <i> for italic). With the advent of CSS, physical tags have become less 
+  relevant for styling purposes.
