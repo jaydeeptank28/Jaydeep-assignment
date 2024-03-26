@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#first {
+    background-color: #ffffff;
+    font-family: Segoe UI;
+    color: #222222;
+    padding: 50px 0;
+    width: 960px;
+    margin: auto;
+}
+
+.logo {
+    margin-left: 63px;
+}
+
+.logo img {
+    width: 175px;
+    height: 56px;
+}
+
+nav {
+    height: 97px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right ul {
+    display: flex;
+    gap: 20px;
+}
+
+.right ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.right ul li span {
+    padding: 0 5px;
+}
+
+.right ul li svg {
+    margin-top: 2px;
+}
+
+.right {
+    margin-right: 80px;
+    margin-bottom: 7px;
+}
+
+.end img {
+    margin-top: 11px;
+}
+
+.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.first h1 {
+    font-size: 48px;
+    font-weight: 400;
+}
+
+.first h1 img {
+    margin-left: 10px;
+}
+
+.first h3 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 38px;
+}
+
+.first button {
+    width: 292px;
+    height: 48px;
+    font: 14px;
+    font-weight: bold;
+    color: #ffffff;
+    padding: 12px 20px;
+    background-color: #00B6D1;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.first button:hover {
+    animation-duration: 1s;
+    opacity: 0.9;
+}
+
+.btns {
+    padding-top: 32px;
+}
+
+.second {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-top: 78px;
+    padding-left: 10px;
+}
+
+.ue-mid-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.second h3 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-left: 15px;
+    margin-bottom: 15px;
+}
+
+.second a {
+    color: #222222;
+    text-decoration: none;
+
+}
+
+.second small {
+    font-size: 14.4px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.third {
+    padding-top: 37px;
+}
+
+.main-card {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 27px;
+
+}
+
+.card {
+    width: 300px;
+    height: 158px;
+    background-color: #f9f9f9;
+    padding: 20px 14px 10px 14px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card h3 {
+    font-size: 20px;
+    padding-bottom: 23px;
+}
+
+.card h3 small {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.card-eng h3 {
+    padding-bottom: 51px;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn button {
+    width: 125px;
+    height: 37px;
+}
+
+.blue button {
+    font-size: 12px;
+    background-color: #00B6D1;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.green button {
+    font-size: 12px;
+    background-color: #81c780;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.blue button:hover,
+.green button:hover {
+    opacity: 0.9;
+}
+
+#second {
+    background-color: #222222;
+    color: #ffffff;
+    font-family: Segoe UI;
+    padding: 70px 0;
+}
+
+.one {
+    padding-bottom: 125px;
+    width: 960px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.newsletter {
+    width: 47%;
+    padding-top: 80px;
+}
+
+.newsletter h3 {
+    text-align: center;
+    font-size: 24px;
+    padding-bottom: 10px;
+
+}
+
+.newsletter p {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+
+}
+
+.form-container {
+    width: 345px;
+    height: 264px;
+    border-radius: 12px;
+    padding: 30px 35px;
+    background-color: #ffffff;
+}
+
+.form-container h3 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #00B6D1;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.form-group label {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #222222;
+    margin-bottom: 4px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid rgb(51 51 51 / 16%);
+    margin-bottom: 11px;
+}
+
+.form-container button {
+    background-color: #00B6D1;
+    font-size: 16px;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    font-style: normal;
+    width: 100%;
+    cursor: pointer;
+    height: 47px;
+    margin-bottom: 11px;
+}
+
+.two {
+    width: 960px;
+    margin: auto;
+}
+
+.two h3 {
+    font-size: 24px;
+    padding-bottom: 10px;
+}
+
+.two p {
+    font-size: 16px;
+    padding-bottom: 16px;
+}
+
+.two p a {
+    color: #00B6D1;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #ffffff;
+    color: #222222;
+    padding: 70px 0 55px 0;
+}
+
+.main-footer {
+    display: flex;
+    width: 960px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.main-footer ul li {
+    list-style-type: none;
+    cursor: pointer;
+    font-size: 14px;
+    padding-bottom: 8px;
+}
+
+.main-footer h4 {
+    font-size: 16px;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+.mail button {
+    background-color: #00b6d1;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px 25px;
+    width: 213px;
+    border: #00b6d1;
+    color: #fff;
+}
+
+.mail button:hover {
+    animation-duration: 1s;
+    opacity: 0.9;
+}
+
+.mail input {
+    width: 218px;
+    height: 40px;
+    padding: 10px 16px;
+    border: 1px solid #22242626;
+    border-radius: 7px;
+}
+
+.main-footer .list4 {
+    width: 219px;
+    height: 189px;
+}
+
+.main-footer .list4 p {
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.last {
+    width: 960px;
+    margin: auto;
+    padding: 35px 0 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.last .footer-logo img {
+    width: 157px;
+    height: 51px;
+    cursor: pointer;
+}
+
+.last .footer-right svg {
+    width: 28px;
+    height: 28px;
+    transition: transform .2s;
+}
+
+.last .footer-right ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.last .footer-right ul li {
+    list-style: none;
+    cursor: pointer;
+}
+
+.copyright {
+    width: 960px;
+    margin: auto;
+    font-size: 12px;
+}
+.last .footer-right svg:hover{
+    transform: scale(1.1);
+}
