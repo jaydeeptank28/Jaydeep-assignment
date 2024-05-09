@@ -1,0 +1,100 @@
+# What is jQuery?
+> jQuery is a popular JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, animation, and AJAX (asynchronous JavaScript and XML) interactions. It abstracts many complex tasks into simpler methods that can be invoked with less code compared to traditional JavaScript.
+
+jQuery simplifies common tasks like selecting and manipulating HTML elements, handling events such as mouse clicks and keyboard inputs, and making asynchronous requests to servers. It became widely adopted due to its ease of use, cross-browser compatibility, and extensive plugin ecosystem, which allows developers to extend its functionality further.
+
+While jQuery was once ubiquitous in web development, the rise of modern JavaScript frameworks like React, Angular, and Vue.js has somewhat diminished its prominence. However, it still remains relevant, especially in maintaining legacy codebases or for developers who prefer its simplicity for certain tasks.
+
+
+
+
+# How to Apply CSS Using JQuery, How to Add Class and Remove Class in Jquery ,JQuery Animation?
+> To apply CSS using jQuery use the .css() method.
+// Applying CSS properties directly
+$('#elementID').css('property', 'value');
+
+// Applying multiple CSS properties
+$('#elementID').css({
+    'property1': 'value1',
+    'property2': 'value2',
+    // Add more properties as needed
+});
+
+
+> To add or remove classes using jQuery can use the .addClass() and .removeClass() methods respectively:
+// Adding a class
+$('#elementID').addClass('className');
+
+// Removing a class
+$('#elementID').removeClass('className');
+
+// Toggle a class (Add if it's not present, remove if it's present)
+$('#elementID').toggleClass('className');
+
+
+> For jQuery animation, there are several methods available. Here are some of the common ones:
+   1.animate(): Used to perform custom animations on selected elements.
+	$('#elementID').animate({ 
+    	'property': 'value', 
+    	'property2': 'value2' 
+	}, duration);
+
+   2.slideDown(), .slideUp(), and .slideToggle(): Used to create sliding animations.
+	$('#elementID').slideDown(duration);
+	$('#elementID').slideUp(duration);
+	$('#elementID').slideToggle(duration);
+
+   3.fadeIn(), .fadeOut(), and .fadeToggle(): Used to create fading animations.
+	$('#elementID').fadeIn(duration);
+	$('#elementID').fadeOut(duration);
+	$('#elementID').fadeToggle(duration);
+
+
+
+# How to create slider with animation?
+> <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <style>
+        .main{
+            padding: 20px;
+            background-color: red;
+            text-align: center;
+        }
+        .sub{
+            padding: 100px;
+            background-color: aqua;
+            text-align: center;
+            display: none;
+            
+        }
+     </style>
+</head>
+<body>
+    <button id="one">stop</button>
+    <div class="main">Click</div>
+    <div class="sub">Slide</div>
+</body>
+<script>
+    $(document).ready(function (){
+        $(".main").click( function () {
+            $(".sub").slideToggle(3000) 
+            // $(".sub").slideUp(3000) 
+            // $(".sub").slideDown(3000) 
+        })
+    })
+
+    $(document).ready(function (){
+        $("#one").click( function () {
+            $(".sub").stop()
+        })
+    })
+</script>
+</html>
+
+
+
