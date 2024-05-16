@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Test 1</title>
+    <style>
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"],
+        textarea {
+            width: 70vh;
+            padding: 5px;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <table>
+            <tr>
+                <td><label for="first-name">First Name:</label></td>
+                <td><input type="text" id="first-name" name="first_name" placeholder="Enter your first name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="last-name">Last Name:</label></td>
+                <td><input type="text" id="last-name" name="last_name" placeholder="Enter your last name"></td>
+            </tr>
+
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" id="email" name="email" placeholder="Email should contain @"></td>
+            </tr>
+            <tr>
+                <td><label for="mobile">Mobile:</label></td>
+                <td><input type="text" id="mobile" name="mobile" placeholder="Only 10 digits are allowed"></td>
+            </tr>
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" id="male" value="Male">
+                    <label class="gender-label" for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="Female">
+                    <label class="gender-label" for="female">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="dob">Date Of Birth:</label></td>
+                <td><input type="date" id="dob" name="dob" placeholder="mm/dd/yyyy"></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td><textarea id="address" name="address"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="city">City:</label></td>
+                <td><input type="text" id="city" name="city"></td>
+            </tr>
+            <tr>
+                <td><label for="pin">Area PIN:</label></td>
+                <td><input type="text" id="pin" name="pin"></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td><input type="text" id="state" name="state"></td>
+            </tr>
+            <tr>
+                <td><label for="qualification">Qualification:</label></td>
+                <td>
+                    <select id="qualification" name="qualification">
+                        <option disabled selected>Select Qualification</option>
+                        <option value="BE">BE</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BSC">BSC</option>
+                        <option value="ME">ME</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="specialization">Specialization:</label></td>
+                <td>
+                    <input type="checkbox" name="specialization" value="Computer Science">Computer Science <br>
+                    <input type="checkbox" name="specialization" value="Information Technology">Information Technology
+                    <br>
+                    <input type="checkbox" name="specialization" value="Computer Architecture">Computer Architecture
+                    <br>
+                    <input type="checkbox" name="specialization" value="Tele Communication">Tele Communication
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><button type="submit">Register</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+<script>
+    function validateForm() {
+        const form = document.forms["myForm"];
+        const firstName = form["first_name"].value.trim();
+        const lastName = form["last_name"].value.trim();
+        const email = form["email"].value.trim();
+        const mobile = form["mobile"].value.trim();
+        const gender = form["gender"].value;
+        const dob = form["dob"].value;
+        const address = form["address"].value.trim();
+        const city = form["city"].value.trim();
+        const pin = form["pin"].value.trim();
+        const state = form["state"].value.trim();
+        const qualification = form["qualification"].value;
+        const specialization = form["specialization"];
+        const password = form["password"].value.trim();
+
+        if (!firstName) {
+            alert("First name is required");
+            return false;
+        }
+
+        if (!lastName) {
+            alert("Last name is required");
+            return false;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email || !emailPattern.test(email)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+
+        const mobilePattern = /^\d{10}$/;
+        if (!mobile || !mobilePattern.test(mobile)) {
+            alert("Please enter a valid 10-digit mobile number");
+            return false;
+        }
+
+        if (!gender) {
+            alert("Please select your gender");
+            return false;
+        }
+
+        if (!dob) {
+            alert("Please enter your date of birth");
+            return false;
+        }
+
+        if (!address) {
+            alert("Address is required");
+            return false;
+        }
+
+        if (!city) {
+            alert("City is required");
+            return false;
+        }
+
+        const pinPattern = /^\d+$/;
+        if (!pin || !pinPattern.test(pin)) {
+            alert("Please enter a valid PIN code");
+            return false;
+        }
+
+        if (!state) {
+            alert("State is required");
+            return false;
+        }
+
+        if (qualification === "Select Qualification") {
+            alert("Please select your qualification");
+            return false;
+        }
+
+        const specializationSelected = Array.from(specialization).some(checkbox => checkbox.checked);
+        if (!specializationSelected) {
+            alert("Please select at least one specialization");
+            return false;
+        }
+
+        if (!password) {
+            alert("Password is required");
+            return false;
+        }
+
+        return true;
+    }
+
+</script>
+
+</html>
