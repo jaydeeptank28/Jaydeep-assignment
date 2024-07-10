@@ -1,0 +1,60 @@
+# Write a program to Show an alert.
+> alert("This is  program to Show an alert");
+
+
+# What will be the result for these expressions?
+1. 5 > 4
+2. "apple" > "pineapple"
+3. "2" > "12"
+4. undefined == null
+5. undefined === null
+6. null == "\n0\n"
+7. null === +"\n0\n"
+
+ans:
+1.true
+2.false
+3.true
+4.true
+5.false
+6.false
+7.false
+
+
+
+# Will alert be shown?  
+  if ("0") { alert( 'Hello'); }
+> yes
+
+
+
+# What is the code below going to output? alert( null || 2 || undefined );
+> 2
+
+
+
+#The following function returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
+> let age = prompt("Enter Your Age");
+
+
+        if (age >= 18) {
+            console.log(true);
+        } else {
+            confirm('Did your parents allow you?');
+        }
+
+
+
+
+# Replace Function Expressions with arrow functions in the code below:
+>  function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+}
+
+ask(
+    "Do you agree?", 
+    () => { alert("You agreed."); },
+    () => { alert("You canceled the execution."); }
+);
+

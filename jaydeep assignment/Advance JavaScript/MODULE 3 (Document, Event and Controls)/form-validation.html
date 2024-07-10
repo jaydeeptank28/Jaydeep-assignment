@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: #1d2630;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-5 mb-5">Form Validation</h1>
+        </div>
+        <div class="main row justify-content-center">
+            <form id="student-form" class="row justify-content-center mb-4" onsubmit="return validateForm()">
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="firstname">First Name</label>
+                    <input class="form-control" id="firstname" type="text" placeholder="Enter First Name">
+                </div>
+
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="lastname">Last Name</label>
+                    <input class="form-control" id="lastname" type="text" placeholder="Enter Last Name">
+                </div>
+
+                <div class="col-10 col-md-8 mb-3">
+                    <label for="rollno">Roll Number</label>
+                    <input class="form-control" id="rollno" type="text" placeholder="Enter Roll Number">
+                </div>
+
+                <div class="col-10 col-md-8">
+                    <input class="btn btn-success add-btn" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const firstName = document.getElementById('firstname').value.trim();
+            const lastName = document.getElementById('lastname').value.trim();
+            const rollNo = document.getElementById('rollno').value.trim();
+
+            if (!firstName) {
+                alert('Please enter your first name.');
+                return false;
+            }
+            
+            if (!lastName) {
+                alert('Please enter your last name.');
+                return false;
+            }
+            
+            if (!rollNo) {
+                alert('Please enter your roll number.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>
