@@ -1,0 +1,48 @@
+Q1. What is Express.js?
+=>  Express.js is a lightweight and flexible web application framework for Node.js, 
+    designed to build web applications and APIs. It simplifies the development process with features like:
+
+	> Middleware: Functions to handle requests and responses.
+	> Routing: Define routes for different HTTP methods and paths.
+	> HTTP Simplification: Easier handling of HTTP requests and responses.
+	> Template Engines: Supports engines like Pug, EJS for dynamic HTML generation.
+	> Static Files: Easy serving of static files like images, CSS, and JavaScript.
+	> Extensibility: Add custom functionality through middleware and plugins.
+
+    # Use Cases
+	> Building web applications
+	> Creating RESTful APIs
+	> Quick prototyping
+
+
+
+
+
+
+Q2. Create localhost server using express.
+=>  const express = require('express');
+	const app = express();
+
+	app.listen(3000, () => {
+  	  console.log("Server is running in 3000 port");
+	});
+
+
+
+
+
+Q3. Create basic “Hello world” app using node and express.
+=>  const express = require('express');
+	const app = express();
+	
+
+	app.get('/', (req, res) => {
+		res.send('Hello World!');
+	});
+
+	app.listen(3000, () => {
+  		console.log("Server is running in 3000 port");
+	});
+
+  
+
