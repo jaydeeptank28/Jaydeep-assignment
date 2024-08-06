@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.5s;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 350px;
+            text-align: center;
+        }
+        
+        h1 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+        
+        form {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        
+        input[type="text"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: calc(100% - 100px);
+            box-sizing: border-box;
+        }
+        
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background-color: #0056b3;
+        }
+        
+        .weather-info {
+            margin-top: 20px;
+        }
+        
+        h2 {
+            color: #333;
+        }
+        
+        .temperature {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .description {
+            font-size: 18px;
+            color: #555;
+        }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather App</h1>
+        <form action="/" method="post">
+            <label for="city">City Name:</label>
+            <input type="text" name="city" id="cityname" placeholder="Enter city" required>
+            <button type="submit"><i class="fas fa-search"></i> Search</button>
+        </form>
+
+        <% if (weatherData) { %>
+            <div class="weather-info">
+                <h2><%= weatherData.cityname %>, <%= weatherData.country %></h2>
+                <p class="temperature"><i class="fas fa-thermometer-half"></i> <%= weatherData.temp %>°C</p>
+                <p class="description"><%= weatherData.description %></p>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>
