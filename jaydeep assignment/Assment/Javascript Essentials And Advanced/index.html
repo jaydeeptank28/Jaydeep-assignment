@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Booking Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Restaurants Booking Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br>
+
+        <label for="number">Mobile Number:</label>
+        <input type="number" id="number" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email"><br>
+
+        <label for="person">No of Person:</label>
+        <input type="number" id="person" required><br>
+
+        <label for="booking">Choice of Booking</label>
+        <select name="booking" id="booking" onchange="updateForm()">
+            <option disabled selected value>Select Booking Choice</option>
+            <option value="full">Full day booking</option>
+            <option value="half">Half day booking</option>
+            <option value="hourly">Hourly booking</option>
+        </select><br>
+
+        <div id="date-div" class="hidden">
+            <label for="date">Date:</label>
+            <input type="date" id="date"><br>
+        </div>
+
+        <div id="slot-div" class="hidden">
+            <label for="slot">Book Your Slot:</label>
+            <select name="slot" id="slot">
+                <option disabled selected value>Select Slot</option>
+                <option value="breakfast">Breakfast</option>
+                <option value="lunch">Lunch</option>
+                <option value="dinner">Dinner</option>
+            </select><br>
+        </div>
+
+        <div id="time-div" class="hidden">
+            <label for="hourly">Select Time:</label>
+            <input type="time" name="hourly" id="hourly">
+        </div>
+
+        <input type="submit" value="Book Now" class="btn-submit">
+    </form>
+
+<script src="app.js"></script>
+    
+</body>
+
+</html>
