@@ -1,0 +1,131 @@
+Q1. What is MongoDB?
+=>  MongoDB is a NoSQL database designed to store and manage large amounts of unstructured or semi-structured data. It uses a flexible schema model where data is stored in JSON-like documents (BSON format), making it highly scalable and suitable for handling various types of data. MongoDB is often used for applications that require fast access to data and flexible data structures.
+
+
+Q2. What is difference between mongo DB and SQL?
+=> MongoDB and MySQL are two database management systems that you can use to store and manage data. 
+-MySQL is a relational database system that stores data in a structured tabular format.
+- In contrast, MongoDB stores data as JSON documents in a more flexible format. 
+Both offer performance and scalability, but they give better performance for different use cases.
+
+
+
+Q3. Create Database for Online Shopping App
+=>  To create a database in MongoDB, you simply need to switch to it. MongoDB creates the database when you first store data in it. You can use the MongoDB shell or a client tool like MongoDB Compass.
+
+-Switch to (or create) the "shoppingApp" database
+    use shoppingApp
+
+
+
+Q4. Create Require collections for online shopping app and documents
+=>
+
+1.User
+
+db.createCollection("users")
+db.users.insertOne({
+  _id: ObjectId("user_id_1"),
+  name: "Alice Smith",
+  email: "alice.smith@example.com",
+  password: "hashed_password", // Ensure to hash passwords
+  address: "456 Elm St, Springfield",
+  phone: "+9876543210"
+})
+
+
+
+2.Product category
+
+db.createCollection("productCategories")
+db.productCategories.insertOne({
+  _id: ObjectId("category_id_1"),
+  name: "Electronics",
+  description: "Devices and gadgets"
+})
+
+
+3.Product
+
+db.createCollection("products")
+db.products.insertOne({
+  _id: ObjectId("product_id_1"),
+  name: "Smartphone",
+  category: ObjectId("category_id_1"), // Reference to product category
+  price: 299.99,
+  stock: 50
+})
+
+
+4.Order
+
+db.createCollection("orders")
+db.orders.insertOne({
+  _id: ObjectId("order_id_1"),
+  userId: ObjectId("user_id_1"), // Reference to user
+  productId: ObjectId("product_id_1"), // Reference to product
+  quantity: 2,
+  totalPrice: 599.98,
+  orderDate: new Date()
+})
+
+
+5.Review
+
+db.createCollection("reviews")
+db.reviews.insertOne({
+  _id: ObjectId("review_id_1"),
+  productId: ObjectId("product_id_1"), // Reference to product
+  userId: ObjectId("user_id_1"), // Reference to user
+  rating: 5,
+  comment: "Excellent product, highly recommend!"
+})
+
+
+
+
+
+
+Q5. Write command to show all data from product collections and sort in ascending order
+=>  db.products.find().sort({ price: 1 })
+
+
+
+
+Q6. Update product price for particular product.
+=>  db.products.updateOne(
+  { _id: ObjectId("product_id_1") }, // Criteria to find the product
+  { $set: { price: 349.99 } } // New price value
+)
+
+
+Q7. Write command to delete particular document and collection.
+=>  
+
+-Delete a Specific Document
+To delete a specific document from a collection, you can use the deleteOne method with a filter to identify the document.
+
+For example, to delete a product with a specific _id:
+db.products.deleteOne({ _id: ObjectId("product_id_1") })
+
+
+-Delete an Entire Collection
+To delete an entire collection, you use the drop method on the collection.
+
+For example, to delete the products collection:
+db.products.drop()
+
+
+Summary:
+Delete a Document:
+db.collectionName.deleteOne({ filterCriteria })
+Replace collectionName with the name of your collection (e.g., products) and filterCriteria with the criteria to match the document (e.g., { _id: ObjectId("product_id_1") }).
+
+Delete a Collection:
+db.collectionName.drop()
+Replace collectionName with the name of your collection (e.g., products).
+
+
+
+
+
